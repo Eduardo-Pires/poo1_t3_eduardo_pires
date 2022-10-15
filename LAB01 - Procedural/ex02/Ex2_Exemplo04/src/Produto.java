@@ -2,9 +2,9 @@
 
 public class Produto {
 
-    public String[] nome = new String[100];
-    public float[] preco = new float[4];
-    public int[] qtd_estoque = new int[4];
+    String nome;
+    float preco;
+    int qtd_estoque;
 
     public boolean altera_preco(float preco, float porcentagem)
     {
@@ -13,7 +13,6 @@ public class Produto {
         if(porcentagem > -100)
         {
             temp = 1 + porcentagem/100;
-            //O this.preco não funciona e sem ele o código roda, porém não troca o preço
             this.preco = preco * temp;
             return true;
         }
