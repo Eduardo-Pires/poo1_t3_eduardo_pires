@@ -7,9 +7,8 @@ public class Main
         Produto[] item = new Produto[4];
         Scanner scanf = new Scanner(System.in);
 
-        /*  realizei pequenas mudanças estéticas na saída do programa, porém os valores e funcionalidade continuam os
-         *  mesmos do "exemplo 04.c"
-         */
+        //  realizei pequenas mudanças estéticas na saída do programa para melhor compreensão
+        //  erros de código do exemplo 4 foram corrigidos
 
         for(int i = 0; i < 4; i++)
         {
@@ -29,8 +28,7 @@ public class Main
         //nas saídas eu dei uma otimizada nos espaços para melhor vizualização
 
         System.out.printf("\nAumentando o preco em 10%% do produto 1 e 3\n");
-        //acredito que possa ter um equivoco nessa parte, mas mantive os valores do original
-        item[0].altera_preco(item[0].preco, -110);
+        item[0].altera_preco(item[0].preco, 10);
         item[2].altera_preco(item[2].preco, 10);
 
         System.out.printf("\nReduzindo o preco em 5%% do produto 2");
@@ -44,8 +42,7 @@ public class Main
             System.out.printf("\nPreco alterado com sucesso");
         }
 
-        System.out.printf("\n\nAlterando o preco do prod. 3");
-        //outra vez acredito que possa ter tido um equívoco, pois está alterando o quarto produto, mas mantive como estava
+        System.out.printf("\n\nAlterando o preco do prod. 4");
         if (!(item[3].altera_preco(item[3].preco,-110)))
         {
             System.out.printf("\nErro: preco nao alterado. Porcentagem invalida\n");
