@@ -63,7 +63,7 @@ public class principal {
     {
         Scanner scanf = new Scanner(System.in);
 
-        int i = 1;
+        int i;
         int[] numero = new int[6];
 
         for (i = 1; i <= 6; i++)
@@ -200,7 +200,7 @@ public class principal {
     {
         Scanner scanf = new Scanner(System.in);
 
-        int i, auxMaior = 0;
+        int i, auxMaior;
         int[] numero = new int[6];
 
         System.out.printf("entre com as notas do aluno %d: ", 1);
@@ -225,17 +225,18 @@ public class principal {
         {
             if(auxMaior == numero[i])
             {
-                System.out.println("A nota do aluno " + i + " é " + 100 + " ");
+                System.out.println("A nota do aluno " + (i+1) + " é " + 100 + " ");
             }
             else
             {
-                System.out.println("A nota do aluno " + i + " é " + (numero[i]*2) + " ");
+                System.out.println("A nota do aluno " + (i+1) + " é " + (numero[i]*2) + " ");
             }
 
         }
 
     }
 
+    //precisa de correção
     public static void ex08()
     {
         Scanner scanf = new Scanner(System.in);
@@ -267,12 +268,80 @@ public class principal {
 
     public static void ex09()
     {
+        Scanner scanf = new Scanner(System.in);
+
+        int i, numeroDeAlunos = 0, auxSum = 0;
+
+        do
+        {
+            if(numeroDeAlunos > 100)
+            {
+                System.out.println("Erro! O número máximo de alunos permitido é 100.\n");
+            }
+
+            System.out.print("Entre com o número de alunos: ");
+            numeroDeAlunos = scanf.nextInt();
+        }while(numeroDeAlunos > 100);
+
+        int[] numero = new int[numeroDeAlunos];
+
+        for (i = 1; i <= numeroDeAlunos; i++)
+        {
+            System.out.printf("digite a nota do aluno %d: ", i);
+            numero[i-1] = scanf.nextInt();
+
+            auxSum += numero[i-1];
+        }
+
+        System.out.printf("\nRelatório de Notas\n");
+
+        for (i = 0; i < numeroDeAlunos; i++)
+        {
+            System.out.format("A nota do aluno %d é: %d\n", i+1 , numero[i]);
+        }
+
+        System.out.println("A média da turma é: " + (float)auxSum/numeroDeAlunos);
 
     }
 
     public static void ex10()
     {
+        Scanner scanf = new Scanner(System.in);
 
+        int i;
+        int[] arrayA = new int[3], arrayB = new int[3], arrayC = new int[3];
+
+        for (i = 1; i <= 6; i++)
+        {
+            if(i <= 3)
+            {
+                System.out.printf("Digite o valor %d de A: ", i);
+                arrayA[i-1] = scanf.nextInt();
+
+                if(i == 3)
+                {
+                    System.out.println();
+                }
+            }
+            else if(i <= 6)
+            {
+                System.out.printf("Digite o valor %d de B: ", i-3);
+                arrayB[i-4] = scanf.nextInt();
+            }
+        }
+
+        System.out.print("\nO vetor C, definido como C = A-B é (");
+        for (i = 0; i < 3; i++)
+        {
+            arrayC[i] = arrayA[i] - arrayB[i];
+            System.out.print(arrayC[i]);
+
+            if(i < 2)
+            {
+                System.out.print(',');
+            }
+        }
+        System.out.println(')');
     }
 
     public static void ex11()
@@ -305,95 +374,46 @@ public class principal {
 
     }
 
+
+    //função que encapsula o switch-case para escolher as funções dos diferentes exercícios
     public static void escolher(String escolha)
     {
-        switch (escolha)
-        {
-            case "ex01":
-                ex01();
-                break;
-
-            case "ex02":
-                ex02();
-                break;
-
-            case "ex03":
-                ex03();
-                break;
-
-            case "ex04":
-                ex04();
-                break;
-
-            case "ex05":
-                ex05();
-                break;
-
-            case "ex06":
-                ex06();
-                break;
-
-            case "ex07":
-                ex07();
-                break;
-
-            case "ex08":
-                ex08();
-                break;
-
-            case "ex09":
-                ex09();
-                break;
-
-            case "ex10":
-                ex10();
-                break;
-
-            case "ex11":
-                ex11();
-                break;
-
-            case "ex12":
-                ex12();
-                break;
-
-            case "ex13":
-                ex13();
-                break;
-
-            case "ex14":
-                ex14();
-                break;
-
-            case "ex15":
-                ex15();
-                break;
-
-            case "ex16":
-                ex16();
-                break;
-
-            default:
-                System.out.println("opção inválida");
-                break;
+        switch (escolha) {
+            case "ex01" -> ex01();
+            case "ex02" -> ex02();
+            case "ex03" -> ex03();
+            case "ex04" -> ex04();
+            case "ex05" -> ex05();
+            case "ex06" -> ex06();
+            case "ex07" -> ex07();
+            case "ex08" -> ex08();
+            case "ex09" -> ex09();
+            case "ex10" -> ex10();
+            case "ex11" -> ex11();
+            case "ex12" -> ex12();
+            case "ex13" -> ex13();
+            case "ex14" -> ex14();
+            case "ex15" -> ex15();
+            case "ex16" -> ex16();
+            default -> System.out.println("opção inválida");
         }
     }
 
-
+    //para não ter de ser mudado manualmente no código foi criado um sistema de escolha
     public static void main(String[] args) {
         Scanner scanf = new Scanner(System.in);
         String escolha;
-        Short deveContinuar = 0;
+        short deveContinuar = 1;
 
-
-        while(deveContinuar != 1)
+        //O laço de repetição permite verificar a funcionalidade de todos os exercícios sem parar a execução
+        while(deveContinuar != 0)
         {
             System.out.println("digite a parte que deseja acessar (formato: ex01, ex02,...,ex16): ");
             escolha = scanf.nextLine();
 
             escolher(escolha);
-            
-            System.out.printf("\ncontinuar? (0 = sim e 1 = não)\n");
+
+            System.out.printf("\ndeseja verificar outra parte? (1 = sim e 0 = não)\n");
             deveContinuar = scanf.nextShort();
             scanf.nextLine();
         }
