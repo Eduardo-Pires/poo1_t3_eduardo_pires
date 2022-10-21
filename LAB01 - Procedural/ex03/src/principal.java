@@ -436,7 +436,7 @@ public class principal {
         resultado[0] = (numero[0]/total)*100;
         float maior = resultado[0];
 
-        System.out.println("Probabilidades");
+
         for (i = 1; i < 4; i++)
         {
            resultado[i] = ((numero[i]/total)*100);
@@ -448,6 +448,7 @@ public class principal {
 
         }
 
+        System.out.println("Probabilidades");
         for (i = 0; i < 4; i++)
         {
             if (resultado[i] != maior)
