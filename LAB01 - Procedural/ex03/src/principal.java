@@ -346,8 +346,72 @@ public class principal {
 
     public static void ex11()
     {
+        Scanner scanf = new Scanner(System.in);
+
+        int i, k = 0, j = 0, numpar = 0, numImpar = 0;
+        int[] arrayA = new int[5];
+
+        for (i = 1; i <= 5; i++)
+        {
+
+                System.out.printf("Digite o valor %d: ", i);
+                arrayA[i-1] = scanf.nextInt();
+
+                if(arrayA[i-1]%2 != 0)
+                {
+                    numImpar++;
+                }
+                else
+                {
+                    numpar++;
+                }
+
+        }
+
+        int[] arrayB = new int[numImpar], arrayC = new int[numpar];
+
+        i = 0;
+        while (i < numpar + numImpar)
+        {
+
+            if(arrayA[i]%2 != 0)
+            {
+                arrayB[j] = arrayA[i];
+                j++;
+            }
+            else
+            {
+                arrayC[k] = arrayA[i];
+                k++;
+            }
+            i++;
+        }
+
+        System.out.print("\nimpares: ");
+        for (i = 0; i < numImpar; i++)
+        {
+            System.out.print(arrayB[i]);
+
+            if(i < numImpar-1)
+            {
+                System.out.print(',');
+            }
+        }
+
+        System.out.print("\npares: ");
+        for (i = 0; i < numpar; i++)
+        {
+            System.out.print(arrayC[i]);
+
+            if(i < numpar - 1)
+            {
+                System.out.print(',');
+            }
+        }
+
 
     }
+
 
     public static void ex12()
     {
