@@ -323,7 +323,7 @@ public class principal {
                     System.out.println();
                 }
             }
-            else if(i <= 6)
+            else
             {
                 System.out.printf("Digite o valor %d de B: ", i-3);
                 arrayB[i-4] = scanf.nextInt();
@@ -467,6 +467,28 @@ public class principal {
 
     public static void ex13()
     {
+        Scanner scanf = new Scanner(System.in);
+
+        int i;
+        int[] numero = new int[5];
+
+        for (i = 1; i <= 5; i++)
+        {
+            System.out.printf("Entre com o número %d: ", i);
+            numero[i-1] = scanf.nextInt();
+
+            if(numero[i-1] < 0)
+            {
+                numero[i-1] = 0;
+            }
+        }
+
+        System.out.print("Zerando os negativos, obtém-se: ");
+        for (i = 0; i < 5; i++)
+        {
+            System.out.print(numero[i] + " ");
+        }
+        System.out.println();
 
     }
 
