@@ -415,6 +415,52 @@ public class principal {
 
     public static void ex12()
     {
+        Scanner scanf = new Scanner(System.in);
+
+        int i;
+        float total = 0;
+        float[] numero = new float[4];
+        float[] resultado = new float[4];
+
+        String[] cores = {"Verde: ", "Azul: ", "Amarela: ", "Vermelha: "};
+
+        for (i = 0; i < 4; i++)
+        {
+            System.out.print(cores[i]);
+            numero[i] = scanf.nextFloat();
+            total += numero[i];
+
+            scanf.nextLine();
+        }
+
+        resultado[0] = (numero[0]/total)*100;
+        float maior = resultado[0];
+
+        System.out.println("Probabilidades");
+        for (i = 1; i < 4; i++)
+        {
+           resultado[i] = ((numero[i]/total)*100);
+
+           if(resultado[i] > maior)
+           {
+               maior = resultado[i];
+           }
+
+        }
+
+        for (i = 0; i < 4; i++)
+        {
+            if (resultado[i] != maior)
+            {
+                System.out.println(cores[i] + String.format("%.1f", resultado[i]) + '%');
+            }
+            else
+            {
+                System.out.println(cores[i] + String.format("%.1f", resultado[i]) + '%' + " << Maior probabilidade");
+            }
+        }
+
+
 
     }
 
