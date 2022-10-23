@@ -9,6 +9,8 @@ public class principal {
         int i = 1;
         int[] numero = new int[6];
 
+        System.out.println("<< Listando um vetor >>");
+
         System.out.printf("Entre com o número %d: ", i);
         numero[i-1] = scanf.nextInt();
 
@@ -44,6 +46,8 @@ public class principal {
         int i;
         int[] numero = new int[6];
 
+        System.out.println("<< Listando um vetor com loops >>");
+
         for (i = 1; i <= 6; i++)
         {
             System.out.printf("Entre com o número %d: ", i);
@@ -66,6 +70,8 @@ public class principal {
         int i;
         int[] numero = new int[6];
 
+        System.out.println("<< Listando um vetor em ordem inversa >>");
+
         for (i = 1; i <= 6; i++)
         {
             System.out.printf("Entre com o número %d: ", i);
@@ -87,6 +93,7 @@ public class principal {
         int i = 0;
         int[] numero = new int[6];
 
+        System.out.println("<< Listando um vetor de números pares>>");
         while(i < 6)
         {
             i++;
@@ -95,7 +102,7 @@ public class principal {
 
             if(numero[i-1]%2 != 0)
             {
-                System.out.println("Erro: Valor inválido");
+                System.out.println("Erro: Valor inválido\n");
                 i--;
             }
         }
@@ -115,6 +122,8 @@ public class principal {
         float auxMedia = 0f;
         int i, auxMenos, auxMais;
         int[] numero = new int[5];
+
+        System.out.println("<< 5 valores >>");
 
         for (i = 1; i <= 5; i++)
         {
@@ -138,15 +147,15 @@ public class principal {
 
             if(auxMenos > numero[i])
             {
-                auxMenos += numero[i];
+                auxMenos = numero[i];
             }
 
             auxMedia += numero[i];
         }
         System.out.println();
 
-        System.out.println("O menor valor é: " + auxMenos);
         System.out.println("O maior valor é: " + auxMais);
+        System.out.println("O menor valor é: " + auxMenos);
         System.out.println("O valor médio é: " + (auxMedia/5));
     }
 
@@ -157,6 +166,8 @@ public class principal {
         float auxMedia = 0f;
         int i, auxMenos, auxMais, posicaoMenos = 0, posicaoMais = 0;
         int[] numero = new int[5];
+
+        System.out.println("<< 5 valores >>");
 
         for (i = 1; i <= 5; i++)
         {
@@ -181,7 +192,7 @@ public class principal {
 
             if(auxMenos > numero[i])
             {
-                auxMenos += numero[i];
+                auxMenos = numero[i];
                 posicaoMenos = i;
             }
 
@@ -189,8 +200,8 @@ public class principal {
         }
         System.out.println();
 
-        System.out.println("O menor valor é: " + auxMenos + ", localizado na posição " + posicaoMenos + " do vetor");
         System.out.println("O maior valor é: " + auxMais + ", localizado na posição " + posicaoMais + " do vetor");
+        System.out.println("O menor valor é: " + auxMenos + ", localizado na posição " + posicaoMenos + " do vetor");
         System.out.println("O valor médio é: " + (auxMedia/5));
 
 
@@ -202,6 +213,8 @@ public class principal {
 
         int i, auxMaior;
         int[] numero = new int[6];
+
+        System.out.println("<<Normalizando as notas>>");
 
         System.out.printf("entre com as notas do aluno %d: ", 1);
         numero[0] = scanf.nextInt();
@@ -219,7 +232,7 @@ public class principal {
             }
         }
 
-        System.out.println("\nNotas normalizadas");
+        System.out.println("\nNotas normalizadas\n");
 
         for (i = 0; i < 5; i++)
         {
@@ -244,6 +257,8 @@ public class principal {
         int i;
         int[] numero = new int[5];
 
+        System.out.println("<< Média e desvio-padrão >>");
+
         for (i = 1; i <= 5; i++)
         {
             System.out.printf("Digite o valor %d: ", i);
@@ -253,10 +268,10 @@ public class principal {
             auxSum += numero[i-1];
         }
 
-
         media = auxSum/5;
 
-        for(i = 0; i < 5; i++) {
+        for(i = 0; i < 5; i++)
+        {
             auxDesvioPadrao += Math.pow((numero[i] - media), 2);
         }
 
@@ -271,8 +286,11 @@ public class principal {
 
         int i, numeroDeAlunos = 0, auxSum = 0;
 
+        System.out.println("<< Média de n alunos. Máximo 100 alunos >>");
+
         do
         {
+
             if(numeroDeAlunos > 100)
             {
                 System.out.println("Erro! O número máximo de alunos permitido é 100.\n");
@@ -280,6 +298,7 @@ public class principal {
 
             System.out.print("Entre com o número de alunos: ");
             numeroDeAlunos = scanf.nextInt();
+
         }while(numeroDeAlunos > 100);
 
         int[] numero = new int[numeroDeAlunos];
@@ -296,7 +315,7 @@ public class principal {
 
         for (i = 0; i < numeroDeAlunos; i++)
         {
-            System.out.format("A nota do aluno %d é: %d\n", i+1 , numero[i]);
+            System.out.printf("A nota do aluno %d é: %d\n", i+1 , numero[i]);
         }
 
         System.out.println("A média da turma é: " + (float)auxSum/numeroDeAlunos);
@@ -309,6 +328,8 @@ public class principal {
 
         int i;
         int[] arrayA = new int[3], arrayB = new int[3], arrayC = new int[3];
+
+        System.out.println("<< Subtração de vetores >>");
 
         for (i = 1; i <= 6; i++)
         {
@@ -350,6 +371,8 @@ public class principal {
         int i, k = 0, j = 0, numpar = 0, numImpar = 0;
         int[] arrayA = new int[5];
 
+        System.out.println("<< Pares e Ímpares >>");
+
         for (i = 1; i <= 5; i++)
         {
 
@@ -369,10 +392,8 @@ public class principal {
 
         int[] arrayB = new int[numImpar], arrayC = new int[numpar];
 
-        i = 0;
-        while (i < numpar + numImpar)
+        for(i = 0; i < 5; i++)
         {
-
             if(arrayA[i]%2 != 0)
             {
                 arrayB[j] = arrayA[i];
@@ -383,7 +404,6 @@ public class principal {
                 arrayC[k] = arrayA[i];
                 k++;
             }
-            i++;
         }
 
         System.out.print("\nimpares: ");
@@ -421,8 +441,10 @@ public class principal {
         float[] numero = new float[4];
         float[] resultado = new float[4];
 
+        System.out.println("<< Probabilidades >>\n");
         String[] cores = {"Verde: ", "Azul: ", "Amarela: ", "Vermelha: "};
 
+        System.out.println("Digite a quantidade de bolinhas");
         for (i = 0; i < 4; i++)
         {
             System.out.print(cores[i]);
@@ -471,6 +493,8 @@ public class principal {
         int i;
         int[] numero = new int[5];
 
+        System.out.println("<< Zerando negativos >>");
+
         for (i = 1; i <= 5; i++)
         {
             System.out.printf("Entre com o número %d: ", i);
@@ -495,8 +519,19 @@ public class principal {
     {
         Scanner scanf = new Scanner(System.in);
 
-        System.out.print("Quantos alunos serão cadastrados: ");
-        int numeroAlunos = scanf.nextInt();
+        int numeroAlunos = 0;
+
+        System.out.println("<< Universidade X >>");
+
+        do {
+            if (numeroAlunos > 10000)
+            {
+                System.out.println("erro, digite novamente\n");
+            }
+
+            System.out.print("Quantos alunos serão cadastrados: ");
+            numeroAlunos = scanf.nextInt();
+        }while (numeroAlunos > 10000);
 
         int[] numeroAluno = new int[numeroAlunos];
         String[] classeSocial = new String[numeroAlunos];
@@ -531,6 +566,7 @@ public class principal {
         double[] numero = new double[8];
         double erroPi = 3.141592653589793238462643383279502884197169;
 
+        System.out.println("<< Valores iguais >>");
 
         for (i = 1; i <= 8; i++)
         {
@@ -545,7 +581,7 @@ public class principal {
             }
         }
 
-        System.out.print("\n\nValores repetidos: ");
+        System.out.print("\nValores repetidos: ");
         for (i = 0; i < numero.length; i++)
         {
             printado = 0;
@@ -574,6 +610,7 @@ public class principal {
         double[] numero = new double[8];
         double erroPi = 3.141592653589793238462643383279502884197169;
 
+        System.out.println("<< Valores iguais >>");
 
         for (i = 1; i <= 8; i++)
         {
@@ -588,7 +625,7 @@ public class principal {
             }
         }
 
-        System.out.println("\n\nValores repetidos: ");
+        System.out.println("\nValores repetidos: ");
         for (i = 0; i < numero.length; i++)
         {
             printado = 0;
@@ -616,7 +653,7 @@ public class principal {
 
 
 
-    //função que encapsula o switch-case para escolher as funções dos diferentes exercícios
+    //função que encapsula o switch-case para escolher e então acessar os métodos dos diferentes exercícios
     public static void escolher(String escolha)
     {
         switch (escolha)
