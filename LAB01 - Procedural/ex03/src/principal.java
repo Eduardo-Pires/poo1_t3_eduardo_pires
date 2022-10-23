@@ -529,6 +529,7 @@ public class principal {
 
         int i, j, printado;
         double[] numero = new double[8];
+        double erroPi = 3.141592653589793238462643383279502884197169;
 
 
         for (i = 1; i <= 8; i++)
@@ -544,7 +545,7 @@ public class principal {
             }
         }
 
-        System.out.print("Valores repetidos: ");
+        System.out.print("\n\nValores repetidos: ");
         for (i = 0; i < numero.length; i++)
         {
             printado = 0;
@@ -552,12 +553,12 @@ public class principal {
             {
                 if (numero[i] == numero[j] && printado > 0)
                 {
-                    numero[j] = 3.141592653589793238462643383279502884197169;
+                    numero[j] = erroPi;
                     printado++;
                     continue;
                 }
 
-                if (numero[i] == numero[j])
+                if (numero[i] == numero[j] && numero[j] != erroPi)
                 {
                     System.out.printf("%.0f ", numero[j]);
                     printado++;
@@ -567,7 +568,50 @@ public class principal {
     }
     public static void ex16()
     {
+        Scanner scanf = new Scanner(System.in);
 
+        int i, j, printado;
+        double[] numero = new double[8];
+        double erroPi = 3.141592653589793238462643383279502884197169;
+
+
+        for (i = 1; i <= 8; i++)
+        {
+            System.out.printf("Entre com o número %d: ", i);
+            numero[i - 1] = scanf.nextFloat();
+
+            if(numero[i-1]- (int)numero[i-1] != 0)
+            {
+                System.out.println("erro, digite um número inteiro");
+                scanf.nextLine();
+                i--;
+            }
+        }
+
+        System.out.println("\n\nValores repetidos: ");
+        for (i = 0; i < numero.length; i++)
+        {
+            printado = 0;
+            for (j = i + 1; j < numero.length; j++)
+            {
+                if (numero[i] == numero[j] && printado > 0)
+                {
+                    numero[j] = erroPi;
+                    printado++;
+                    continue;
+                }
+
+                if (numero[i] == numero[j] && numero[j] != erroPi)
+                {
+                    System.out.printf("%.0f ", numero[j]);
+                    printado++;
+                }
+            }
+            if (printado != 0)
+            {
+                System.out.println("aparece " + (printado+1) + " vezes");
+            }
+        }
     }
 
 
@@ -575,7 +619,8 @@ public class principal {
     //função que encapsula o switch-case para escolher as funções dos diferentes exercícios
     public static void escolher(String escolha)
     {
-        switch (escolha) {
+        switch (escolha)
+        {
             case "ex01" -> ex01();
             case "ex02" -> ex02();
             case "ex03" -> ex03();
