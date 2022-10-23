@@ -125,7 +125,7 @@ public class principal {
         auxMenos = numero[0];
         auxMais = numero[0];
 
-        System.out.printf("\n\n");
+        System.out.print("\n\n");
         System.out.print("Os valores lidos são: ");
         for (i = 0; i < 5; i++)
         {
@@ -167,7 +167,7 @@ public class principal {
         auxMenos = numero[0];
         auxMais = numero[0];
 
-        System.out.printf("\n\n");
+        System.out.print("\n\n");
         System.out.print("Os valores lidos são: ");
         for (i = 0; i < 5; i++)
         {
@@ -210,7 +210,7 @@ public class principal {
 
         for (i = 2; i <= 5; i++)
         {
-            System.out.printf("entre com as notas do aluno %d: ", i);
+            System.out.printf("entre com a nota do aluno %d: ", i);
             numero[i-1] = scanf.nextInt();
 
             if(numero[i-1] > auxMaior)
@@ -219,7 +219,7 @@ public class principal {
             }
         }
 
-        System.out.printf("\nNotas normalizadas\n");
+        System.out.println("\nNotas normalizadas");
 
         for (i = 0; i < 5; i++)
         {
@@ -236,19 +236,18 @@ public class principal {
 
     }
 
-    //precisa de correção
     public static void ex08()
     {
         Scanner scanf = new Scanner(System.in);
 
         double media, auxDesvioPadrao = 0.0, desvioPadrao, auxSum = 0.0;
         int i;
-        double[] numero = new double[5];
+        int[] numero = new int[5];
 
         for (i = 1; i <= 5; i++)
         {
             System.out.printf("Digite o valor %d: ", i);
-            numero[i-1] = scanf.nextDouble();
+            numero[i-1] = scanf.nextInt();
 
             scanf.nextLine();
             auxSum += numero[i-1];
@@ -258,10 +257,10 @@ public class principal {
         media = auxSum/5;
 
         for(i = 0; i < 5; i++) {
-            auxDesvioPadrao += Math.pow(numero[i] - media, 2);
+            auxDesvioPadrao += Math.pow((numero[i] - media), 2);
         }
 
-        desvioPadrao = Math.sqrt(auxDesvioPadrao/5);
+        desvioPadrao = Math.sqrt(auxDesvioPadrao/4);
 
         System.out.println("A média é " + media + " e o desvio padrão é " + desvioPadrao);
     }
@@ -293,7 +292,7 @@ public class principal {
             auxSum += numero[i-1];
         }
 
-        System.out.printf("\nRelatório de Notas\n");
+        System.out.println("\nRelatório de Notas");
 
         for (i = 0; i < numeroDeAlunos; i++)
         {
@@ -494,18 +493,83 @@ public class principal {
 
     public static void ex14()
     {
+        Scanner scanf = new Scanner(System.in);
 
+        System.out.print("Quantos alunos serão cadastrados: ");
+        int numeroAlunos = scanf.nextInt();
+
+        int[] numeroAluno = new int[numeroAlunos];
+        String[] classeSocial = new String[numeroAlunos];
+        float[] cra = new float[numeroAlunos];
+
+        for (int i = 0; i < numeroAlunos; i++)
+        {
+            System.out.print("Entre com o número do aluno: ");
+            numeroAluno[i] = scanf.nextInt();
+            scanf.nextLine();
+
+            System.out.printf("Entre com a classe social do aluno %d: ", numeroAluno[i]);
+            classeSocial[i] = scanf.nextLine();
+
+            System.out.printf("Entre com o CRA do aluno %d: ", numeroAluno[i]);
+            cra[i] = scanf.nextFloat();
+
+            System.out.println();
+        }
+
+        System.out.println("\n==== Alunos Cadastrados ====");
+        for (int i = 0; i < numeroAlunos; i++)
+        {
+            System.out.printf("Número: %d Classe Social: %s CRA: %.2f\n", numeroAluno[i], classeSocial[i], cra[i]);
+        }
     }
 
-    public static void ex15()
-    {
+    public static void ex15() {
+        Scanner scanf = new Scanner(System.in);
 
+        int i, j, printado;
+        double[] numero = new double[8];
+
+
+        for (i = 1; i <= 8; i++)
+        {
+            System.out.printf("Entre com o número %d: ", i);
+            numero[i - 1] = scanf.nextFloat();
+
+            if(numero[i-1]- (int)numero[i-1] != 0)
+            {
+                System.out.println("erro, digite um número inteiro");
+                scanf.nextLine();
+                i--;
+            }
+        }
+
+        System.out.print("Valores repetidos: ");
+        for (i = 0; i < numero.length; i++)
+        {
+            printado = 0;
+            for (j = i + 1; j < numero.length; j++)
+            {
+                if (numero[i] == numero[j] && printado > 0)
+                {
+                    numero[j] = 3.141592653589793238462643383279502884197169;
+                    printado++;
+                    continue;
+                }
+
+                if (numero[i] == numero[j])
+                {
+                    System.out.printf("%.0f ", numero[j]);
+                    printado++;
+                }
+            }
+        }
     }
-
     public static void ex16()
     {
 
     }
+
 
 
     //função que encapsula o switch-case para escolher as funções dos diferentes exercícios
@@ -546,7 +610,7 @@ public class principal {
 
             escolher(escolha);
 
-            System.out.printf("\ndeseja verificar outra parte? (1 = sim e 0 = não)\n");
+            System.out.println("\ndeseja verificar outra parte? (1 = sim e 0 = não)");
             deveContinuar = scanf.nextShort();
             scanf.nextLine();
         }
