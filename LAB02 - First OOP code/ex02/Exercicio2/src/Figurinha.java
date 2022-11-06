@@ -1,5 +1,4 @@
 import java.time.LocalDate;
-import java.util.Scanner;
 
 public class Figurinha
 {
@@ -10,83 +9,88 @@ public class Figurinha
     private String posicao;
     private String pais;
 
-
-    private static LocalDate configuraData()
+    //funções set: são funções para alterar um atributo específico da figurinha
+    public void setName(String nomeJogador)
     {
-        Scanner scanf = new Scanner(System.in);
-        String data = scanf.nextLine();
-        return LocalDate.parse(data);
+        this.nomeJogador = nomeJogador;
     }
 
-    public void alteraInfo(Figurinha jogador)
+    public void setbirthDate(String dataNascimento)
     {
-        Scanner scanf = new Scanner(System.in);
-        System.out.println("(nome), (data de nascimento), (altura)\n(peso), (posição), (país), (tudo)");
-        System.out.println("dos elelementos acima, qual você deseja alterar: ");
-        String escolha = scanf.nextLine();
-
-        switch (escolha)
-        {
-            case "nome" ->
-            {
-                System.out.print("Nome do jogador: ");
-                jogador.nomeJogador = scanf.nextLine();
-            }
-            case "data de nascimento" ->
-            {
-                System.out.print("data de nascimento do jogador [ano-mês-dia]: ");
-                jogador.dataNascimento = configuraData();
-            }
-            case "altura" ->
-            {
-                System.out.print("altura do jogador: ");
-                jogador.altura = scanf.nextFloat();
-            }
-            case "peso" ->
-            {
-                System.out.print("peso do jogador: ");
-                jogador.peso = scanf.nextFloat();
-                scanf.nextLine();
-            }
-            case "posição" ->
-            {
-                System.out.print("posição do jogador: ");
-                jogador.posicao = scanf.nextLine();
-            }
-            case "país" ->
-            {
-                System.out.print("país do jogador: ");
-                jogador.pais = scanf.nextLine();
-            }
-            case "tudo" ->
-            {
-                System.out.println("\n<<entre com as informações do jogador>>");
-                System.out.print("Nome do jogador: ");
-                jogador.nomeJogador = scanf.nextLine();
-                System.out.print("data de nascimento do jogador [ano-mês-dia]: ");
-                jogador.dataNascimento = configuraData();
-                System.out.print("altura do jogador: ");
-                jogador.altura = scanf.nextFloat();
-                System.out.print("peso do jogador: ");
-                jogador.peso = scanf.nextFloat();
-                scanf.nextLine();
-                System.out.print("posição do jogador: ");
-                jogador.posicao = scanf.nextLine();
-                System.out.print("país do jogador: ");
-                jogador.pais = scanf.nextLine();
-            }
-        }
+        this.dataNascimento = LocalDate.parse(dataNascimento);
+    }
+    public void setHeight(float altura)
+    {
+        this.altura = altura;
+    }
+    public void setWeight(float peso)
+    {
+        this.peso = peso;
+    }
+    public void setPosition(String posicao)
+    {
+        this.posicao = posicao;
+    }
+    public void setCountry(String pais)
+    {
+        this.pais = pais;
     }
 
-    public void mostraInfo(Figurinha jogador)
+    //dá opção ao usuário de setar todos os elementos em um único método
+    public void setFigurinha(String nomeJogador, String dataNascimento, float altura, float peso, String posicao, String pais)
     {
-        System.out.println("\n<<Informações do jogador " + jogador.nomeJogador + ">>");
-        System.out.println("Nome: " + jogador.nomeJogador);
-        System.out.println("Data de nascimento: " + jogador.dataNascimento);
-        System.out.println("Altura: "+ jogador.altura);
-        System.out.println("Peso: "+ jogador.peso);
-        System.out.println("Posicao: "+ jogador.posicao);
-        System.out.println("País: "+ jogador.pais);
+            this.nomeJogador = nomeJogador;
+            this.dataNascimento = LocalDate.parse(dataNascimento);
+            this.altura = altura;
+            this.peso = peso;
+            this.posicao = posicao;
+            this.pais = pais;
+    }
+
+    //os próximos 6 métodos imprimem elementos específicos da figurinha
+    public void printName()
+    {
+        System.out.println("Nome: " + nomeJogador);
+    }
+
+    public void printBirthDate()
+    {
+        System.out.println("Data de nascimento: " + dataNascimento);
+    }
+
+    public void printHeight()
+    {
+        System.out.println("Altura: "+ altura);
+    }
+
+    public void printWeight()
+    {
+        System.out.println("Peso: "+ peso);
+    }
+
+    public void printPosition()
+    {
+        System.out.println("Posicao: "+ posicao);
+    }
+
+    public void printcountry()
+    {
+        System.out.println("País: "+ pais);
+    }
+
+
+
+    //mostra uma figurinha inteira
+    public void printFigurinha()
+    {
+        System.out.println("\n<<Informações do jogador " + nomeJogador + ">>");
+        System.out.println("Nome: " + nomeJogador);
+        System.out.println("Data de nascimento: " + dataNascimento);
+        System.out.println("Altura: "+ altura);
+        System.out.println("Peso: "+ peso);
+        System.out.println("Posicao: "+ posicao);
+        System.out.println("País: "+ pais);
     }
 
 }
+
