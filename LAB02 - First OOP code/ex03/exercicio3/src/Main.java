@@ -15,7 +15,7 @@ public class Main {
         for (int i = 0; i < numJog; i++)
         {
             jogador[i] = new Figurinha();
-            
+
             System.out.printf("\n<<entre com as informações do jogador %d>>\n", i+1);
             System.out.print("Nome do jogador: ");
             jogador[i].setName(scanf.nextLine());

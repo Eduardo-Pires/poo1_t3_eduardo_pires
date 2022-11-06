@@ -1,18 +1,19 @@
 public class Selecao {
-    String nomeSelecao;
-    String nometecnico;
-    String Titular1;
-    String Titular2;
-    String Titular3;
-    String Titular4;
-    String Titular5;
-    String Titular6;
-    String Titular7;
-    String Titular8;
-    String Titular9;
-    String Titular10;
-    String Titular11;
+    private String nomeSelecao;
+    private String nometecnico;
+    private String[] titular = new String[11];
 
+    public void setTeamName(String nomeSelecao)
+    {
+        this.nomeSelecao = nomeSelecao;
+    }
+    public void setCoachName(String nometecnico)
+    {
+        this.nometecnico = nometecnico;
+    }
 
-
+    public void setTeamOwners(String[] titular)
+    {
+        this.titular = titular;
+    }
 }
