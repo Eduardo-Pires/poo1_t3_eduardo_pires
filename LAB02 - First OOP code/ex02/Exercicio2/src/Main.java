@@ -33,7 +33,7 @@ public class Main {
         jog3.printHeight();
         jog3.printWeight();
         jog3.printPosition();
-        jog3.printcountry();
+        jog3.printCountry();
 
 
     }

@@ -77,7 +77,7 @@ public class Figurinha
         System.out.println("Posicao: "+ posicao);
     }
 
-    public void printcountry()
+    public void printCountry()
     {
         System.out.println("País: "+ pais);
     }

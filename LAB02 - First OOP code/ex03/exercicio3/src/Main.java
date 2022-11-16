@@ -5,7 +5,6 @@ public class Main {
     {
         Scanner scanf = new Scanner(System.in);
 
-
         System.out.print("Digite o numero de jogadores: ");
         int numJog = scanf.nextInt();
         Figurinha[] jogador = new Figurinha[numJog];
