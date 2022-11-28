@@ -74,7 +74,7 @@ public class Figurinha
 
     public void printHeight()
     {
-        System.out.println("Altura: "+ altura);
+        System.out.println("Altura: "+ String.format("%.2f", altura));
     }
 
     public void printWeight()
@@ -98,7 +98,7 @@ public class Figurinha
         System.out.println("\n<<Informações do jogador " + nomeJogador + ">>");
         System.out.println("Nome: " + nomeJogador);
         System.out.println("Data de nascimento: " + dataNascimento);
-        System.out.println("Altura: "+ altura);
+        System.out.println("Altura: "+ String.format("%.2f", altura));
         System.out.println("Peso: "+ peso);
         System.out.println("Posicao: "+ posicao);
         System.out.println("País: "+ pais);
