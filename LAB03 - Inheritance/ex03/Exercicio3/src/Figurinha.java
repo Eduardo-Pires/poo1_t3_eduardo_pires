@@ -10,7 +10,6 @@ public class Figurinha
     private String posicao;
     private String pais;
 
-    public Figurinha(){}
 
     public Figurinha(String pais)
     {
@@ -20,6 +19,7 @@ public class Figurinha
     public Figurinha(String nomeJogador, String dataNascimento, float altura, float peso, String posicao, String pais)
     {
         this.nomeJogador = nomeJogador;
+        this.auxDataNascimento = dataNascimento;
         this.dataNascimento = LocalDate.parse(dataNascimento);
         this.altura = altura;
         this.peso = peso;
