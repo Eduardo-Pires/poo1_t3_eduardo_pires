@@ -2,12 +2,15 @@ import java.time.LocalDate;
 
 public class Figurinha
 {
-    protected String nomeJogador;
-    protected LocalDate dataNascimento;
-    protected float altura;
-    protected float peso;
-    protected String posicao;
-    protected String pais;
+    private String nomeJogador;
+    private LocalDate dataNascimento;
+    private String auxDataNascimento;
+    private float altura;
+    private float peso;
+    private String posicao;
+    private String pais;
+
+    public Figurinha(){}
 
     public Figurinha(String pais)
     {
@@ -50,11 +53,47 @@ public class Figurinha
         this.pais = pais;
     }
 
+    public String getNomeJogador()
+    {
+        return nomeJogador;
+    }
+
+    public LocalDate getDataNascimento()
+    {
+        return dataNascimento;
+    }
+
+    public String getAuxDataNascimento()
+    {
+        return auxDataNascimento;
+    }
+
+    public float getAltura()
+    {
+        return altura;
+    }
+
+    public float getPeso()
+    {
+        return peso;
+    }
+
+    public String getPosicao()
+    {
+        return posicao;
+    }
+
+    public String getPais()
+    {
+        return pais;
+    }
+
     //dá opção ao usuário de setar todos os elementos em um único método
     public void setFigurinha(String nomeJogador, String dataNascimento, float altura, float peso, String posicao, String pais)
     {
             this.nomeJogador = nomeJogador;
             this.dataNascimento = LocalDate.parse(dataNascimento);
+            this.auxDataNascimento = dataNascimento;
             this.altura = altura;
             this.peso = peso;
             this.posicao = posicao;
