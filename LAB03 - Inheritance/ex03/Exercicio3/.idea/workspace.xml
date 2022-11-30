@@ -1,23 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc71e09e-7670-4546-a558-06074155dd1f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../ex04/Exercicio4/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ex04/Exercicio4/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ex04/Exercicio4/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ex04/Exercicio4/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ex04/Exercicio4/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ex04/Exercicio4/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ex04/Exercicio4/Exercicio4.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ex04/Exercicio4/src/C1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ex04/Exercicio4/src/C2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ex04/Exercicio4/src/C3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ex04/Exercicio4/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Figurinha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Figurinha.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FigurinhaExtra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FigurinhaExtra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="bc71e09e-7670-4546-a558-06074155dd1f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,15 +28,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Eduardo ¨/Desktop/work and classes/programação/git/poo1_t3_eduardo_pires/LAB03 - Inheritance/ex04/Exercicio4",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Eduardo ¨\Desktop\work and classes\programação\git\poo1_t3_eduardo_pires\LAB03 - Inheritance\ex03\Exercicio3\src" />
