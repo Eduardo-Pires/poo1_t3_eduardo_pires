@@ -4,7 +4,6 @@ public class Figurinha
 {
     private String nomeJogador;
     private LocalDate dataNascimento;
-    private String auxDataNascimento;
     private float altura;
     private float peso;
     private String posicao;
@@ -16,11 +15,10 @@ public class Figurinha
         this.pais = pais;
     }
 
-    public Figurinha(String nomeJogador, String dataNascimento, float altura, float peso, String posicao, String pais)
+    public Figurinha(String nomeJogador, LocalDate dataNascimento, float altura, float peso, String posicao, String pais)
     {
         this.nomeJogador = nomeJogador;
-        this.auxDataNascimento = dataNascimento;
-        this.dataNascimento = LocalDate.parse(dataNascimento);
+        this.dataNascimento = dataNascimento;
         this.altura = altura;
         this.peso = peso;
         this.posicao = posicao;
@@ -28,27 +26,34 @@ public class Figurinha
     }
 
     //funções set: são funções para alterar um atributo específico da figurinha
-    public void setName(String nomeJogador)
+
+
+    public void setNomeJogador(String nomeJogador)
     {
         this.nomeJogador = nomeJogador;
     }
-    public void setbirthDate(String dataNascimento)
+
+    public void setDataNascimento(LocalDate dataNascimento)
     {
-        this.dataNascimento = LocalDate.parse(dataNascimento);
+        this.dataNascimento = dataNascimento;
     }
-    public void setHeight(float altura)
+
+    public void setAltura(float altura)
     {
         this.altura = altura;
     }
-    public void setWeight(float peso)
+
+    public void setPeso(float peso)
     {
         this.peso = peso;
     }
-    public void setPosition(String posicao)
+
+    public void setPosicao(String posicao)
     {
         this.posicao = posicao;
     }
-    public void setCountry(String pais)
+
+    public void setPais(String pais)
     {
         this.pais = pais;
     }
@@ -61,11 +66,6 @@ public class Figurinha
     public LocalDate getDataNascimento()
     {
         return dataNascimento;
-    }
-
-    public String getAuxDataNascimento()
-    {
-        return auxDataNascimento;
     }
 
     public float getAltura()
@@ -93,7 +93,6 @@ public class Figurinha
     {
             this.nomeJogador = nomeJogador;
             this.dataNascimento = LocalDate.parse(dataNascimento);
-            this.auxDataNascimento = dataNascimento;
             this.altura = altura;
             this.peso = peso;
             this.posicao = posicao;
