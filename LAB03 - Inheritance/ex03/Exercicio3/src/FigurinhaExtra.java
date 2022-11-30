@@ -5,9 +5,17 @@ public class FigurinhaExtra extends Figurinha
         private String categoria;
         private String cor;
 
+
         public FigurinhaExtra(String nomeJogador, String dataNascimento, float altura, float peso, String posicao, String pais, String categoria, String cor)
         {
             super(nomeJogador, dataNascimento, altura, peso, posicao, pais);
+            this.categoria = categoria;
+            this.cor = cor;
+        }
+
+        public FigurinhaExtra(Figurinha figurinha, String cor, String categoria)
+        {
+            super(figurinha.getNomeJogador(), figurinha.getAuxDataNascimento(), figurinha.getAltura(), figurinha.getPeso(), figurinha.getPosicao(), figurinha.getPais());
             this.categoria = categoria;
             this.cor = cor;
         }
@@ -39,13 +47,7 @@ public class FigurinhaExtra extends Figurinha
         @Override
         public void MostrarFigurinha()
         {
-            System.out.println("\n<<Informações do jogador " + nomeJogador + ">>");
-            System.out.println("Nome: " + nomeJogador);
-            System.out.println("Data de nascimento: " + dataNascimento);
-            System.out.println("Altura: "+ String.format("%.2f", altura));
-            System.out.println("Peso: "+ peso);
-            System.out.println("Posicao: "+ posicao);
-            System.out.println("País: "+ pais);
+            super.MostrarFigurinha();
             System.out.println("Categoria: "+ categoria);
             System.out.println("Cor: "+ cor);
         }
