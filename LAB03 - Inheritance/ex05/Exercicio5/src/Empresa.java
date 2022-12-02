@@ -2,9 +2,10 @@ import java.time.LocalDate;
 public class Empresa
 {
     public static void main(String[] args) {
-        Vendedor logista = new Vendedor("eduardo", LocalDate.parse("2002-02-13"), 2000, 50, 12);
-        logista.calculaSalario();
-
-        System.out.println(logista);
+        Funcionario[] employee = new Funcionario[10];
+        Chefe[] boss = new Chefe[10];
+        Vendedor[] salesPerson = new Vendedor[10];
+        Operario[] worker = new Operario[10];
+        Horista[] hourlyPaid = new Horista[10];
     }
 }
