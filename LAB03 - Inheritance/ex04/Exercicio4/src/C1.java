@@ -25,9 +25,11 @@ public class C1
 
     public void mostrar_atributos()
     {
-        System.out.println("C1{" + "publico='" + publico + '\'' +
-                ", protegido='" + protegido + '\'' +
-                ", privado='" + privado + '\'' +
-                '}');
+        System.out.println
+                (
+                    "publico='" + publico + '\'' +
+                    "\nprotegido='" + protegido + '\'' +
+                    "\nprivado='" + privado + '\''
+                );
     }
 }

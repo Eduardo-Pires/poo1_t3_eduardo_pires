@@ -30,27 +30,29 @@ public class C3 extends C2
 
     @Override
     public void mostrar_atributos() {
-        System.out.println("C3{" +
-                "livre='" + livre + '\'' +
-                ", resguardado='" + resguardado + '\'' +
-                ", particular='" + particular + '\'' +
-                ", comum='" + comum + '\'' +
-                ", reservado='" + reservado + '\'' +
-                ", guardado='" + getGuardado() + '\'' +
-                ", publico='" + publico + '\'' +
-                ", protegido='" + protegido + '\'' +
-                ", privado='" + getPrivado() + '\'' +
-                '}');
+        System.out.println
+                (
+                    "\nlivre='" + livre + '\'' +
+                    "\nresguardado='" + resguardado + '\'' +
+                    "\nparticular='" + particular + '\'' +
+                    "\ncomum='" + comum + '\'' +
+                    "\nreservado='" + reservado + '\'' +
+                    "\nguardado='" + getGuardado() + '\'' +
+                    "\npublico='" + publico + '\'' +
+                    "\nprotegido='" + protegido + '\'' +
+                    "\nprivado='" + getPrivado() + '\''
+                );
     }
 
 
     @Override
     public void mostrar_atributos_super() {
         super.mostrar_atributos();
-        System.out.println("C3{" +
-                "livre='" + livre + '\'' +
-                ", resguardado='" + resguardado + '\'' +
-                ", particular='" + particular + '\'' +
-                '}');
+        System.out.println
+                (
+                    "livre='" + livre + '\'' +
+                    "\nresguardado='" + resguardado + '\'' +
+                    "\nparticular='" + particular + '\''
+                );
     }
 }

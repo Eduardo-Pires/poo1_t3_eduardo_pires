@@ -25,23 +25,25 @@ public class C2 extends C1
 
     @Override
     public void mostrar_atributos() {
-        System.out.println("C2{" +
-                "comum='" + comum + '\'' +
-                ", reservado='" + reservado + '\'' +
-                ", guardado='" + guardado + '\'' +
-                ", publico='" + publico + '\'' +
-                ", protegido='" + protegido + '\'' +
-                ", privado='" + getPrivado() + '\'' +
-                '}');
+        System.out.println
+                (
+                    "comum='" + comum + '\'' +
+                    "\nreservado='" + reservado + '\'' +
+                    "\nguardado='" + guardado + '\'' +
+                    "\npublico='" + publico + '\'' +
+                    "\nprotegido='" + protegido + '\'' +
+                    "\nprivado='" + getPrivado() + '\''
+                );
     }
 
     public void mostrar_atributos_super()
     {
         super.mostrar_atributos();
-        System.out.println("C2{" +
-                "comum='" + comum + '\'' +
-                ", reservado='" + reservado + '\'' +
-                ", guardado='" + guardado + '\'' +
-                '}');
+        System.out.println
+                (
+                    "comum='" + comum + '\'' +
+                    "\nreservado='" + reservado + '\'' +
+                    "\nguardado='" + guardado + '\''
+                );
     }
 }
