@@ -1,4 +1,4 @@
-public class Estudante {
+public abstract class Estudante {
     private String nome;
     private String endereco;
 
@@ -6,6 +6,8 @@ public class Estudante {
         this.nome = nome;
         this.endereco = endereco;
     }
+
+    public abstract double calc_cr(boolean incluiReprovacao);
 
     public void print() {
         System.out.println("Estudante{" +

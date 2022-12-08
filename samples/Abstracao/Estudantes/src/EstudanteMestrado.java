@@ -10,6 +10,11 @@ public class EstudanteMestrado extends EstudantePosGrad {
     }
 
     @Override
+    public double calc_cr(boolean incluiReprovacao) {
+        return 7;
+    }
+
+    @Override
     public void print() {
         super.print();
         System.out.println("EstudanteMestrado{" +

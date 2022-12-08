@@ -8,12 +8,15 @@ public class EstudanteDoutorado extends EstudantePosGrad {
     }
 
     @Override
+    public double calc_cr(boolean incluiReprovacao) {
+        return 10;
+    }
+
     public void print() {
         super.print();
         System.out.println("EstudanteDoutorado{" +
                 "tituloTese='" + tituloTese + '\'' +
                 '}');
-
     }
 
     public String getTituloTese() {

@@ -1,44 +1,55 @@
 public class Main {
 
     public static void main(String[] args) {
-
-        Estudante e = new Estudante("Carlos","Rua 1o de Abril");
+/*
+// Estudante e = new Estudante("Carlos","Rua 1o de Abril");
         EstudanteGraduacao eg = new EstudanteGraduacao("Maria", "Rua Maio", "Java is funny");
-        EstudantePosGrad ep = new EstudantePosGrad("Ailton","Rua 31 de fevereiro","Engenharia",
-                "Banco de Dados");
+      //  EstudantePosGrad ep = new EstudantePosGrad("Ailton","Rua 31 de fevereiro","Engenharia", "Banco de Dados");
         EstudanteMestrado epm = new EstudanteMestrado("Carla","Rua Primavera","Medicina",
                 "Vacinas de RNA", "academico","Anticorpos");
         EstudanteDoutorado epd = new EstudanteDoutorado("Bruno","Rua Inverno",
                 "Tecnologia","Processamento de Imagens","Carros Inteligentes");
 
-        e.print();
 
 
         eg.print();
         System.out.println("Título TCC: " + eg.getTituloTCC());
 
-        ep.print();
-        System.out.println("Formação prévia: " + ep.getFormacao());
 
         epm.print();
         System.out.println("Título Dissertação: " + epm.getTituloDissertacao());
 
         epd.print();
         System.out.println("Título Tese: " + epd.getTituloTese());
-
+*/
 
 
         // casos com polimorfismo
-        Estudante e2 = new Estudante("Carlos","Rua 1o de Abril");
         Estudante eg2 = new EstudanteGraduacao("Maria", "Rua Maio", "Java is funny");
-        Estudante ep2 = new EstudantePosGrad("Ailton","Rua 31 de fevereiro","Engenharia",
-                "Banco de Dados");
         Estudante epm2 = new EstudanteMestrado("Carla","Rua Primavera","Medicina",
                 "Vacinas de RNA", "Anticorpos","academico");
         Estudante epd2 = new EstudanteDoutorado("Bruno","Rua Inverno",
                 "Tecnologia","Processamento de Imagens","Carros Inteligentes");
 
-/*
+        eg2.calc_cr(false);
+        epm2.calc_cr(true);
+        epd2.calc_cr(false);
+
+        Estudante[] e = new Estudante[3];
+        e[0] = new EstudanteGraduacao("Maria", "Rua Maio", "Java is funny");
+        e[1] = new EstudanteMestrado("Carla","Rua Primavera","Medicina",
+                "Vacinas de RNA", "Anticorpos","academico");
+        e[2] = new EstudanteDoutorado("Bruno","Rua Inverno",
+                "Tecnologia","Processamento de Imagens","Carros Inteligentes");
+
+        for (Estudante ei : e){
+            ei.calc_cr(true);
+        }
+
+        for (int i =0; i < e.length; i++){
+            e[i].calc_cr(true);
+        }
+        /*
         e2.print();
         epd2.print();
         ep2.print();

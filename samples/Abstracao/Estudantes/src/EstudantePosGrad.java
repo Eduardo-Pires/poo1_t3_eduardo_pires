@@ -1,4 +1,4 @@
-public class EstudantePosGrad extends Estudante {
+public abstract class EstudantePosGrad extends Estudante {
     private String formacao; // curso  de graduação que o estudante formou
     private String linhadDePesquisa;
 
