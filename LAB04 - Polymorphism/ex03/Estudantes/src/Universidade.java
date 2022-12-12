@@ -3,11 +3,10 @@ import java.time.LocalDate;
 public class Universidade {
     private String nomeUniversidade;
     private LocalDate dataFundacao;
-    private EstudanteDoutorado[] dtr;
-    private EstudanteGraduacao[] grd;
-    private EstudanteMestrado[] mst;
+    private Estudante[] estudante;
+    private int numEstudantes;
 
-    public Universidade(String nomeUniversidade, LocalDate dataFundacao, EstudanteDoutorado[] dtr, EstudanteGraduacao[] grd, EstudanteMestrado[] mst) {
+    public Universidade(String nomeUniversidade, LocalDate dataFundacao, Estudante[] estudante) {
         if(getNumEstudantes() > 100)
         {
             System.out.println("Erro, quantidade invalida de estudantes, universidade não criada.");
@@ -16,9 +15,7 @@ public class Universidade {
         {
             this.nomeUniversidade = nomeUniversidade;
             this.dataFundacao = dataFundacao;
-            this.dtr = dtr;
-            this.grd = grd;
-            this.mst = mst;
+            this.estudante = estudante;
         }
     }
 
@@ -38,32 +35,46 @@ public class Universidade {
         this.dataFundacao = dataFundacao;
     }
 
-    public EstudanteDoutorado[] getDtr() {
-        return dtr;
+    public Estudante[] getEstudante() {
+        return estudante;
     }
 
-    public void setDtr(EstudanteDoutorado[] dtr) {
-        this.dtr = dtr;
+    public void setEstudante(Estudante[] estudante) {
+        if(getNumEstudantes() > 100)
+        {
+            System.out.println("Erro, quantidade invalida de estudantes, operação não realizada.");
+        }
+        else
+        {
+            this.estudante = estudante;
+        }
     }
 
-    public EstudanteGraduacao[] getGrd() {
-        return grd;
-    }
-
-    public void setGrd(EstudanteGraduacao[] grd) {
-        this.grd = grd;
-    }
-
-    public EstudanteMestrado[] getMst() {
-        return mst;
-    }
-
-    public void setMst(EstudanteMestrado[] mst) {
-        this.mst = mst;
+    public void setNumEstudantes()
+    {
+        numEstudantes = estudante.length;
     }
 
     public int getNumEstudantes()
     {
-        return grd.length + dtr.length + dtr.length;
+        return numEstudantes;
+    }
+
+    public void printUniversidade()
+    {
+        for(int i = 0; i < estudante.length; i++)
+        {
+            if(estudante[i] instanceof EstudanteDoutorado)
+            {
+                System.out.println("nome: " + estudante[i].getNome());
+                System.out.println("titulo tese: " + ((EstudanteDoutorado) estudante[i]).tituloTese);
+                System.out.println("linha de pesquisa" + ((EstudanteDoutorado) estudante[i]).getLinhadDePesquisa());
+            }
+            else
+            {
+                System.out.println("nome: " + estudante[i].getNome());
+            }
+            System.out.println();
+        }
     }
 }

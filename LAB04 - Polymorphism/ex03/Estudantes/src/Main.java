@@ -1,6 +1,23 @@
+import java.time.LocalDate;
+
 public class Main {
 
     public static void main(String[] args) {
+
+        EstudantePosGrad[] estudante = new EstudantePosGrad[4];
+        estudante[0] = new EstudantePosGrad("Ailton","Rua 31 de fevereiro","Engenharia",
+                "Banco de Dados");
+        estudante[1] = new EstudantePosGrad("Airton","Rua 32 de fevereiro","Engenharia de software",
+                "Banco de clusters");
+        estudante[2] = new EstudantePosGrad("Amilton","Rua 33 de fevereiro","Engenharia elétrica",
+                "Banco de Eletrons");
+
+        Estudante[] normal = new Estudante[3];
+
+        System.arraycopy(estudante, 0, normal, 0, 3);
+
+        Universidade uni = new Universidade("FUFU", LocalDate.parse("1545-02-02"), normal);
+        uni.printUniversidade();
 
         Estudante e = new Estudante("Carlos","Rua 1o de Abril");
         EstudanteGraduacao eg = new EstudanteGraduacao("Maria", "Rua Maio", "Java is funny");
@@ -12,7 +29,6 @@ public class Main {
                 "Tecnologia","Processamento de Imagens","Carros Inteligentes");
 
         e.print();
-
 
         eg.print();
         System.out.println("Título TCC: " + eg.getTituloTCC());
