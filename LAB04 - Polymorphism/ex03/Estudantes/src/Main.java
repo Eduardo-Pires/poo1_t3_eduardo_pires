@@ -4,6 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+        System.out.println("---------------------------------------------------------------------------");
         EstudantePosGrad[] estudante = new EstudantePosGrad[4];
         estudante[0] = new EstudantePosGrad("Ailton","Rua 31 de fevereiro","Engenharia",
                 "Banco de Dados");
@@ -18,6 +19,8 @@ public class Main {
 
         Universidade uni = new Universidade("FUFU", LocalDate.parse("1545-02-02"), normal);
         uni.printUniversidade();
+        System.out.println("---------------------------------------------------------------------------");
+
 
         Estudante e = new Estudante("Carlos","Rua 1o de Abril");
         EstudanteGraduacao eg = new EstudanteGraduacao("Maria", "Rua Maio", "Java is funny");

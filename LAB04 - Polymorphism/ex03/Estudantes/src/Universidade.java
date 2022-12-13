@@ -4,10 +4,9 @@ public class Universidade {
     private String nomeUniversidade;
     private LocalDate dataFundacao;
     private Estudante[] estudante;
-    private int numEstudantes;
 
     public Universidade(String nomeUniversidade, LocalDate dataFundacao, Estudante[] estudante) {
-        if(getNumEstudantes() > 100)
+        if(getNumEstudantes(estudante) > 100)
         {
             System.out.println("Erro, quantidade invalida de estudantes, universidade não criada.");
         }
@@ -40,7 +39,7 @@ public class Universidade {
     }
 
     public void setEstudante(Estudante[] estudante) {
-        if(getNumEstudantes() > 100)
+        if(getNumEstudantes(estudante) > 100)
         {
             System.out.println("Erro, quantidade invalida de estudantes, operação não realizada.");
         }
@@ -49,20 +48,19 @@ public class Universidade {
             this.estudante = estudante;
         }
     }
-
-    public void setNumEstudantes()
+    public int getNumEstudantes(Estudante[] estudante)
     {
-        numEstudantes = estudante.length;
+        return estudante.length;
     }
 
     public int getNumEstudantes()
     {
-        return numEstudantes;
+        return estudante.length;
     }
 
     public void printUniversidade()
     {
-        for(int i = 0; i < estudante.length; i++)
+        for(int i = 0; i < getNumEstudantes(); i++)
         {
             if(estudante[i] instanceof EstudanteDoutorado)
             {

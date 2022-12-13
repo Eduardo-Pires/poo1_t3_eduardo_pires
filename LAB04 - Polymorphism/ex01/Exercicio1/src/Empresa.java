@@ -9,6 +9,9 @@ public class Empresa
         employee[2] = new Operario("Heracles", LocalDate.parse("2003-06-03"), 339, 43);
         employee[3] = new Vendedor("Jasão", LocalDate.parse("2003-05-05"), 1578, 12, 20);
 
-        FolhaPagamento folhaPagamento = new FolhaPagamento(employee);
+        FolhaPagamento folha = new FolhaPagamento();
+
+        folha.print(employee);
+
     }
 }
