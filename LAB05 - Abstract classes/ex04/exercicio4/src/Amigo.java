@@ -38,6 +38,6 @@ public class Amigo extends Contato{
     @Override
     public void imprimirContato() {
         imprimirBasico();
-        System.out.println(", grau ='(" + grau + ')' + grauToString() +  '\n');
+        System.out.println("grau = (" + grau + ')' + grauToString() +  '\n');
     }
 }

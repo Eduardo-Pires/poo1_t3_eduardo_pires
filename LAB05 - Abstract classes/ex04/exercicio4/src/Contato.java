@@ -15,10 +15,10 @@ public abstract class Contato
     public void imprimirBasico()
     {
         System.out.println(
-                "apelido='" + apelido + '\n' +
-                ", nome='" + nome + '\n' +
-                ", email='" + email + '\n' +
-                ", aniversario='" + aniversario + '\n'
+                "apelido = " + apelido + '\n' +
+                "nome = " + nome + '\n' +
+                "email = " + email + '\n' +
+                "aniversario = " + aniversario
                 );
     }
 

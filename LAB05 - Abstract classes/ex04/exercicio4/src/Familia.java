@@ -18,6 +18,6 @@ public class Familia extends Contato{
     @Override
     public void imprimirContato() {
         imprimirBasico();
-        System.out.println(", parentesco='" + parentesco + '\n');
+        System.out.println("parentesco = " + parentesco + '\n');
     }
 }

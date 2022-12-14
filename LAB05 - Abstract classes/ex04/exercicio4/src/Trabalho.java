@@ -18,6 +18,6 @@ public class Trabalho extends Contato
     @Override
     public void imprimirContato() {
         imprimirBasico();
-        System.out.println(", tipo='" + tipo + '\n');
+        System.out.println("tipo= " + tipo + '\n');
     }
 }
