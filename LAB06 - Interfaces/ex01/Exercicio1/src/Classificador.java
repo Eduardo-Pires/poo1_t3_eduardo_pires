@@ -1,6 +1,6 @@
 public class Classificador
 {
-    public void ordena (Classificavel[] a)
+    public static void ordena (Classificavel[] a)
     {
         Classificavel elem, menor;
         int pos;

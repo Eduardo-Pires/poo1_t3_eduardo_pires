@@ -17,6 +17,7 @@ public class Cliente implements Classificavel
     @Override
     public boolean eMenorQue(Classificavel o) {
         Cliente compara = (Cliente) o;
-        return this.nome.length() < compara.nome.length();
+        int numComp = this.nome.compareTo(compara.nome);
+        return numComp < 0;
     }
 }

@@ -19,8 +19,6 @@ public class Main {
         service[1] = new Servico((int)(Math.random() * (costMax - costMin)) + costMin);
         service[2] = new Servico((int)(Math.random() * (costMax - costMin)) + costMin);
 
-        Classificador sort = new Classificador();
-
         System.out.println("Pré ordenação:");
         for (int i = 0; i < 3; i++)
         {
@@ -40,9 +38,9 @@ public class Main {
         }
         System.out.println();
 
-        sort.ordena(costumer);
-        sort.ordena(product);
-        sort.ordena(service);
+        Classificador.ordena(costumer);
+        Classificador.ordena(product);
+        Classificador.ordena(service);
 
         System.out.println("Pós ordenação: ");
         for (int i = 0; i < 3; i++)
