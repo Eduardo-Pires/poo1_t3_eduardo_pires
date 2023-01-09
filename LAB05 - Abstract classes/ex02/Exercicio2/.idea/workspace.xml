@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1009a96e-b0ca-480a-a3df-744671d40f10" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../LAB04 - Polymorphism/enunciado.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LAB04 - Polymorphism/enunciado.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="1009a96e-b0ca-480a-a3df-744671d40f10" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +41,10 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/Eduardo ¨/Desktop/work and classes/programação/git/poo1_t3_eduardo_pires/LAB05 - Abstract classes/ex02/Exercicio2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -58,6 +57,7 @@
       <option name="presentableId" value="Default" />
       <updated>1670973030419</updated>
       <workItem from="1672687421352" duration="100000" />
+      <workItem from="1673217055048" duration="753000" />
     </task>
     <servers />
   </component>
